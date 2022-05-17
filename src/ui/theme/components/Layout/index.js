@@ -1,4 +1,4 @@
-import { useTheme } from '@mui/material'
+import PropTypes from 'prop-types'
 import Grid from '@mui/material/Grid'
 import React from 'react'
 
@@ -14,6 +14,10 @@ function Layout({ children }) {
       {children}
     </Grid>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.element
 }
 
 export default Layout

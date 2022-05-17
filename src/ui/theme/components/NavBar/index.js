@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
   AppBar as Root,
@@ -9,11 +10,7 @@ import {
   useTheme,
 } from '@mui/material'
 
-import Home from '@mui/icons-material/Home'
-import StartRounded from '@mui/icons-material/StartRounded'
-import Person from '@mui/icons-material/Person'
-
-function NavBar() {
+function NavBar({ links }) {
   const NavBtn = ({ icon, text }) => {
     return (
       <Card sx={{ flexGrow: 2 }} elevation={0}>
@@ -41,11 +38,18 @@ function NavBar() {
         justifyContent: 'center',
       }}
     >
-      <NavBtn text={'Home'} icon={<Home />} />
-      <NavBtn text={'Record'} icon={<StartRounded />} />
-      <NavBtn text={'Profile'} icon={<Person />} />
+      {links &&
+        links.map((link, index) => {
+          return <NavBtn key={index} text={link.text} icon={link.icon} />
+        })}
     </Root>
   )
+}
+
+NavBar.propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({ text: PropTypes.string, icon: PropTypes.element })
+  ),
 }
 
 export default NavBar

@@ -25,6 +25,7 @@ Drawer.propTypes = {
   anchor: PropTypes.oneOf(['right', 'left', 'top', 'bottom']),
   open: PropTypes.bool,
   close: PropTypes.func,
+  children: PropTypes.element
 }
 
 export default Drawer
