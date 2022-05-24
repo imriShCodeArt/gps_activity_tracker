@@ -2,7 +2,6 @@ import Theme from './ui/theme'
 import Home from './ui/pages/Home'
 
 function App() {
-
   return <Theme>
     <Home 
     posts={[

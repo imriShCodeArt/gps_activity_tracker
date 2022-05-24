@@ -36,6 +36,7 @@ function NavBar({ links }) {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        bgcolor:'transparent'
       }}
     >
       {links &&

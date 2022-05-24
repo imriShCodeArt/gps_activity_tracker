@@ -6,6 +6,7 @@ import {
   IconButton,
   Toolbar,
   Typography,
+  useTheme,
 } from '@mui/material'
 
 import NotificationsActiveOutlined from '@mui/icons-material/NotificationsActiveOutlined'
@@ -14,12 +15,13 @@ import SettingsOutlined from '@mui/icons-material/SettingsOutlined'
 import PropTypes from 'prop-types'
 
 function AppBar({ pageTitle, settingsAction }) {
-  const x = 10
-  console.log(x)
-  
   return (
-    <Root sx={{ height: '4em' }} position='static'>
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
+    <Root position='static'>
+      <Toolbar
+        sx={{
+          justifyContent: 'space-between'
+        }}
+      >
         <Typography color={'Menu'}>{pageTitle}</Typography>
         <ButtonGroup>
           <IconButton>
@@ -36,8 +38,7 @@ function AppBar({ pageTitle, settingsAction }) {
 
 AppBar.propTypes = {
   pageTitle: PropTypes.string,
-  settingsAction: PropTypes.func
+  settingsAction: PropTypes.func,
 }
-
 
 export default AppBar

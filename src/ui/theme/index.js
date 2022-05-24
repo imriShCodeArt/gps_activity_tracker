@@ -24,7 +24,6 @@ function Theme({ children, theme, pageTitle }) {
     setDrawerOpen(true)
     setDrawerContent(content)
   }
-  // **********DRAWER PROPS**********
 
   /**
    * SETTINGS PROPS
@@ -32,8 +31,6 @@ function Theme({ children, theme, pageTitle }) {
   function handleParamChange(paramName, paramValue) {
     console.log(paramName, paramValue)
   }
-  // **********SETTINGS PROPS**********
-
   return (
     <ThemeProvider theme={theme}>
       <Drawer
@@ -49,26 +46,27 @@ function Theme({ children, theme, pageTitle }) {
         pageTitle={pageTitle}
       />
       <Layout>{children}</Layout>
-      <Box position={'fixed'} bottom={'1em'} width={'100vw'} >
-        <NavBar links={[
-          {text: 'Home', icon: <Home />},
-          {text: 'Record', icon: <StartRounded />},
-          {text: 'Profile', icon: <Person />},
-        ]} />
+      <Box position={'fixed'} bottom={'1em'} width={'100vw'}>
+        <NavBar
+          links={[
+            { text: 'Home', icon: <Home /> },
+            { text: 'Record', icon: <StartRounded /> },
+            { text: 'Profile', icon: <Person /> },
+          ]}
+        />
       </Box>
     </ThemeProvider>
   )
 }
 
-Theme.defaultProps = {
-  pageTitle: 'Home',
-  theme: myTheme,
-}
-
 Theme.propTypes = {
-  children: PropTypes.node,
   theme: PropTypes.object,
   pageTitle: PropTypes.string.isRequired,
+}
+
+Theme.defaultProps = {
+  pageTitle: 'Home',
+  theme: myTheme(),
 }
 
 export default Theme
