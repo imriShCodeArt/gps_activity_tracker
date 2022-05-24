@@ -7,7 +7,7 @@ import NavBar from './components/NavBar'
 import myTheme from './assets/myTheme'
 import PropTypes from 'prop-types'
 import Drawer from './components/Drawer'
-import Settings from '../cards/Settings'
+import Settings from '../cards/Misc/Settings'
 import { Home, Person, StartRounded } from '@mui/icons-material'
 
 function Theme({ children, theme, pageTitle }) {

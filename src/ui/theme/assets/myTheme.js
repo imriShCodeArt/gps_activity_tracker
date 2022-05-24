@@ -1,8 +1,7 @@
 import { createTheme } from '@mui/material'
 import { orange } from '@mui/material/colors'
 
-export default (mod) => {
-  console.log(mod)
+export default () => {
   return createTheme({
     palette: {
       primary: {
