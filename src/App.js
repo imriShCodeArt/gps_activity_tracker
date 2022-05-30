@@ -1,15 +1,19 @@
 import Theme from './ui/theme'
-import Home from './ui/pages/Home'
+import Session from './ui/cards/Home/Session'
+import React from 'react'
+import { Grid } from '@mui/material'
 
 function App() {
-  return <Theme>
-    <Home 
-    posts={[
-      {title: 'Morning Run', dateTime: new Date().toISOString(), runDistance: 3, runTime: 200},
-      {title: 'Morning Run', dateTime: new Date().toISOString(), runDistance: 3, runTime: 257},
-      {title: 'Morning Run', dateTime: new Date().toISOString(), runDistance: 3, runTime: 257},
-    ]}/>
-  </Theme>
+  const tmp = {
+    meta: {fName: 'Imri',lName: 'Wain',activityType: 'run',dateTime: new Date().toISOString(),},
+    performance: [{title: 'Distance',value: '1 km',},{title: 'Pace',value: '7:40 / km',},{title: 'Time',value: '53 m 2 s',},],}
+
+  return (
+    <Theme>
+      <Session {...tmp} />
+      <Session {...tmp} />
+    </Theme>
+  )
 }
 
 export default App

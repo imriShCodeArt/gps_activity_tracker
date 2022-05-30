@@ -16,8 +16,5 @@ function Layout({ children }) {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.element
-}
 
 export default Layout
