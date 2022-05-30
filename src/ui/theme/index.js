@@ -65,7 +65,7 @@ Theme.propTypes = {
 }
 
 Theme.defaultProps = {
-  pageTitle: 'Home',
+  pageTitle: 'You',
   theme: myTheme(),
 }
 

@@ -1,18 +1,29 @@
 import Theme from './ui/theme'
-import Session from './ui/cards/Home/Session'
 import React from 'react'
-import { Grid } from '@mui/material'
+import Router from './Router'
+import Home from './ui/pages/Home'
+import Record from './ui/pages/Record'
+import Profile from './ui/pages/Profile'
 
 function App() {
-  const tmp = {
-    meta: {fName: 'Imri',lName: 'Wain',activityType: 'run',dateTime: new Date().toISOString(),},
-    performance: [{title: 'Distance',value: '1 km',},{title: 'Pace',value: '7:40 / km',},{title: 'Time',value: '53 m 2 s',},],}
-
   return (
-    <Theme>
-      <Session {...tmp} />
-      <Session {...tmp} />
-    </Theme>
+    
+      <Router
+        routes={[
+          {
+            elm: <Home />,
+          },
+          {
+            elm: <Profile />,
+            path: '/profile',
+          },
+          {
+            elm: <Record />,
+            path: '/profile',
+          },
+        ]}
+      />
+    
   )
 }
 
