@@ -7,7 +7,7 @@ function MyRoute({ route }) {
   return (
     <Grid
       item
-      height={'150px'}
+      height={{ xs: '150px', md: '250px' }}
       width={'100%'}
       borderRadius='6px'
       overflow={'hidden'}

@@ -16,10 +16,16 @@ import PropTypes from 'prop-types'
 
 function AppBar({ pageTitle, settingsAction }) {
   return (
-    <Root sx={{height:'3.5em'}} position='sticky'>
+    <Root
+      position='sticky'
+      sx={{ height: '3.5em' }}
+      variant='outlined'
+      elevation={0}
+    >
       <Toolbar
         sx={{
           justifyContent: 'space-between',
+          minHeight: '3.5em!important',
         }}
       >
         <Typography color={'Menu'}>{pageTitle}</Typography>

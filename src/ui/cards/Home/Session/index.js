@@ -13,9 +13,9 @@ function Session({ meta, route, performance }) {
       </Grid>
       <Grid pl={{ xs: 0, sm: 2 }} xs={12} sm={8} item container>
         <SessionStats stats={performance} />
-      </Grid>
-      <Grid xs={12} item container>
         <Splits />
+      </Grid>
+      <Grid xs={12} md={8} item container>
       </Grid>
     </Root>
   )

@@ -46,15 +46,14 @@ function Theme({ children, theme, pageTitle }) {
         pageTitle={pageTitle}
       />
       <Layout>{children}</Layout>
-      <Box position={'fixed'} bottom={'1em'} width={'100vw'}>
-        <NavBar
-          links={[
-            { text: 'Home', href: '/', icon: <Home /> },
-            { text: 'Record', href: '/record', icon: <StartRounded /> },
-            { text: 'Profile', href: '/profile', icon: <Person /> },
-          ]}
-        />
-      </Box>
+
+      <NavBar
+        links={[
+          { text: 'Home', href: '/', icon: <Home fontSize={'small'} /> },
+          { text: 'Record', href: '/record', icon: <StartRounded fontSize={'small'} /> },
+          { text: 'Profile', href: '/profile', icon: <Person fontSize={'small'} /> },
+        ]}
+      />
     </ThemeProvider>
   )
 }

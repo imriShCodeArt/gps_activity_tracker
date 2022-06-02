@@ -6,6 +6,7 @@ import {
   Box,
   Card,
   CardActionArea,
+  Toolbar,
   Typography,
   useTheme,
 } from '@mui/material'
@@ -14,35 +15,55 @@ function NavBar({ links }) {
   const NavBtn = ({ icon, text, href }) => {
     return (
       <Card sx={{ flexGrow: 2 }} elevation={0}>
-        <CardActionArea onClick={()=>window.location.assign(href || '/')} sx={{ height: '4em', width: '100%' }}>
-          <Box textAlign={'center'} color={useTheme().palette.primary.main}>
+        <CardActionArea
+          onClick={() => window.location.assign(href || '/')}
+          sx={{ width: '100%', height: { xs: '4em', md: '2.5em' } }}
+        >
+          <Box
+            sx={{
+              display: { xs: 'block', md: 'flex' },
+              padding:{ xs: 'auto', md:'0em .55em'}
+            }}
+            textAlign={'center'}
+            color={useTheme().palette.primary.main}
+          >
             {icon}
-          </Box>
-          <Box textAlign={'center'} color={useTheme().palette.primary.main}>
             <Typography>{text}</Typography>
           </Box>
+          <Box
+            textAlign={'center'}
+            color={useTheme().palette.primary.main}
+          ></Box>
         </CardActionArea>
       </Card>
     )
   }
   return (
     <Root
-      position='static'
-      color='secondary'
+      color='secondary'      
+      position='fixed'
       sx={{
-        maxHeight: '4em',
-        display: 'flex',
-        flexWrap: 'wrap',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        bgcolor:'transparent'
+        top: { xs: `${window.innerHeight - 62}px`, md: '3.5em' },
+        height: '2em',
       }}
     >
-      {links &&
-        links.map((link, index) => {
-          return <NavBtn key={index} {...link} />
-        })}
+      <Toolbar
+        sx={{
+          minHeight: { xs: '4em', md: '2.5em' },
+          display: 'flex',
+          flexWrap: 'wrap',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          bgcolor: '#FFF',
+          pr: { xs: 0, md: '65%' },
+        }}
+      >
+        {links &&
+          links.map((link, index) => {
+            return <NavBtn key={index} {...link} />
+          })}
+      </Toolbar>
     </Root>
   )
 }

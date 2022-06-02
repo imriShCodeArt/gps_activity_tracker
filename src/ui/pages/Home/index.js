@@ -1,9 +1,15 @@
+import { Divider, Grid } from '@mui/material'
 import React from 'react'
 import Session from '../../cards/Home/Session'
 
 function Home({ items }) {
   const Story = () =>
-    items.map((item, index) => <Session key={index} {...item} />)
+    items.map((item, index) => (
+      <div key={index}>
+        <Divider sx={{ height: '.75em' }} />
+        <Session {...item} />
+      </div>
+    ))
 
   return <Story />
 }
