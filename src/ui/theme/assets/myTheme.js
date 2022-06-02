@@ -6,6 +6,8 @@ export default () => {
     palette: {
       primary: {
         main: orange['A700'],
+        light: orange['200'],
+        dark: orange['900'],
       },
       secondary: {
         main: '#FFF',

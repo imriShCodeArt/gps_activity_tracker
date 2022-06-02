@@ -11,10 +11,10 @@ import {
 } from '@mui/material'
 
 function NavBar({ links }) {
-  const NavBtn = ({ icon, text }) => {
+  const NavBtn = ({ icon, text, href }) => {
     return (
       <Card sx={{ flexGrow: 2 }} elevation={0}>
-        <CardActionArea sx={{ height: '4em', width: '100%' }}>
+        <CardActionArea onClick={()=>window.location.assign(href || '/')} sx={{ height: '4em', width: '100%' }}>
           <Box textAlign={'center'} color={useTheme().palette.primary.main}>
             {icon}
           </Box>
@@ -41,7 +41,7 @@ function NavBar({ links }) {
     >
       {links &&
         links.map((link, index) => {
-          return <NavBtn key={index} text={link.text} icon={link.icon} />
+          return <NavBtn key={index} {...link} />
         })}
     </Root>
   )

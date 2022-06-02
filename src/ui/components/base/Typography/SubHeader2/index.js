@@ -1,20 +1,22 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 
-function SubHeader1({ text, children, size, weight, ...rest }) {
+function SubHeader2({ text, children, size, weight, ...rest }) {
   const letterSize = () => {
     switch (size) {
       case 'xs':
-        return '.45rem'
+        return '.30rem'
       case 'sm':
-        return '.65rem'
+        return '.45rem'
       case 'lg':
-        return '1.35rem'
+        return '.95rem'
+      case 'xlg':
+        return '1.1rem'
       default:
-        return '.85rem'
+        return '.65rem'
     }
   }
-
+  
   const letterWeight = () => {
     switch (weight) {
       case 'light':
@@ -24,20 +26,14 @@ function SubHeader1({ text, children, size, weight, ...rest }) {
       case 'bold':
         return 700
       default:
-        return 500
+        return 300
     }
   }
   return (
-    <Typography
-      variant='subtitle1'
-      fontSize={letterSize()}
-      fontWeight={letterWeight()}
-      letterSpacing={2}
-      {...rest}
-    >
-      {text || children}
+    <Typography variant='subtitle1' textTransform={'uppercase'} fontSize={letterSize()} fontWeight={700} letterSpacing={2} {...rest} >
+        { text || children }
     </Typography>
   )
 }
 
-export default SubHeader1
+export default SubHeader2

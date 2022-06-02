@@ -3,8 +3,16 @@ import React from 'react'
 
 function Heading6({ text, children, ...rest }) {
   return (
-    <Typography variant='h6' {...rest} >
-        { text || children }
+    <Typography
+      fontStyle={'italic'}
+      fontSize='.95rem'
+      fontWeight={700}
+      textTransform={'uppercase'}
+      letterSpacing={0.75}
+      variant='h6'
+      {...rest}
+    >
+      {text || children}
     </Typography>
   )
 }

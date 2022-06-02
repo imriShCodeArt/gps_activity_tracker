@@ -7,23 +7,21 @@ import Profile from './ui/pages/Profile'
 
 function App() {
   return (
-    
-      <Router
-        routes={[
-          {
-            elm: <Home />,
-          },
-          {
-            elm: <Profile />,
-            path: '/profile',
-          },
-          {
-            elm: <Record />,
-            path: '/profile',
-          },
-        ]}
-      />
-    
+    <Router
+      routes={[
+        {
+          elm: <Home />,
+        },
+        {
+          elm: <Profile />,
+          path: '/profile',
+        },
+        {
+          elm: <Record />,
+          path: '/profile',
+        },
+      ]}
+    />
   )
 }
 

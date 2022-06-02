@@ -1,9 +1,9 @@
-import { Grid } from '@mui/material'
+import { Divider, Grid } from '@mui/material'
 import React from 'react'
 import Heading6 from '../../../../../components/base/Typography/Heading6'
 import StatsHeading from '../../../../../components/base/Typography/StatsHeading'
 import StatsValue from '../../../../../components/base/Typography/StatsValue'
-import SubHeader1 from '../../../../../components/base/Typography/SubHeader1'
+import SubHeader2 from '../../../../../components/base/Typography/SubHeader2'
 
 function Splits({ splitsArr }) {
   const Lines = splitsArr.map(({ pace, paceUnit, elevation }, index) => {
@@ -37,14 +37,14 @@ function Splits({ splitsArr }) {
   const tableHead = () => (
     <Grid mt={0.25} item container>
       <Grid textAlign={'center'} xs={1} item>
-        <SubHeader1>KM</SubHeader1>
+        <SubHeader2>KM</SubHeader2>
       </Grid>
       <Grid item xs={1}>
-        <SubHeader1>PACE</SubHeader1>
+        <SubHeader2>PACE</SubHeader2>
       </Grid>
       <Grid item xs={9}></Grid>
       <Grid textAlign={'center'} item xs={1}>
-        <SubHeader1>ELEV</SubHeader1>
+        <SubHeader2>ELEV</SubHeader2>
       </Grid>
     </Grid>
   )

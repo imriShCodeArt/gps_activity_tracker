@@ -49,9 +49,9 @@ function Theme({ children, theme, pageTitle }) {
       <Box position={'fixed'} bottom={'1em'} width={'100vw'}>
         <NavBar
           links={[
-            { text: 'Home', icon: <Home /> },
-            { text: 'Record', icon: <StartRounded /> },
-            { text: 'Profile', icon: <Person /> },
+            { text: 'Home', href: '/', icon: <Home /> },
+            { text: 'Record', href: '/record', icon: <StartRounded /> },
+            { text: 'Profile', href: '/profile', icon: <Person /> },
           ]}
         />
       </Box>
