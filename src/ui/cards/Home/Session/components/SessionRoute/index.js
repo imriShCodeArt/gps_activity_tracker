@@ -1,5 +1,5 @@
 import React from 'react'
-import Map from '../../../../../components/x/Map'
+import Map from 'x/Map'
 
 function SessionRoute() {
   return <Map />

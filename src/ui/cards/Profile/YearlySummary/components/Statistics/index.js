@@ -1,7 +1,7 @@
 import { List, ListItem, ListItemText } from '@mui/material'
 import React from 'react'
-import Body1 from '../../../../../components/base/Typography/Body1'
-import Heading6 from '../../../../../components/base/Typography/Heading6'
+import Body1 from 'base/Typography/Body1'
+import Heading6 from 'base/Typography/Heading6'
 
 function Statistics() {
   const LineTitle = ({ title }) => {

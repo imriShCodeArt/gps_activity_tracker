@@ -6,7 +6,7 @@ import {
   Card,
   CardContent,
 } from '@mui/material'
-import Heading5 from '../../../components/base/Typography/Heading5'
+import Heading5 from 'base/Typography/Heading5'
 import Statistics from './components/Statistics'
 import Segments from './components/Segments'
 import Routes from './components/Routes'

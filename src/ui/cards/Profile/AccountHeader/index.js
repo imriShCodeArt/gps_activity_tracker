@@ -7,13 +7,13 @@ import {
   Stack,
 } from '@mui/material'
 import React, { useState } from 'react'
-import Avatar from '../../../components/base/Avatar'
-import Form from '../../../components/form/Form'
-import TextField from '../../../components/form/TextField'
-import Heading5 from '../../../components/base/Typography/Heading5'
-import Button from '../../../components/base/Button/BtnSecondary'
-import Heading6 from '../../../components/base/Typography/Heading6'
-import StatsField from '../../../components/x/Map/StatsField'
+import Avatar from 'base/Avatar'
+import Form from 'forms/Form'
+import TextField from 'forms/TextField'
+import Heading5 from 'base/Typography/Heading5'
+import Button from 'base/Button/BtnSecondary'
+import Heading6 from 'base/Typography/Heading6'
+import StatsField from 'x/StatsField'
 import { PinDropOutlined } from '@mui/icons-material'
 
 function AccountHeader({ meta, address, performance }) {
@@ -41,16 +41,8 @@ function AccountHeader({ meta, address, performance }) {
       />
       <CardActions sx={{ justifyContent: 'space-between' }}>
         <Box display={'flex'}>
-          <StatsField
-            title={'Followers'}
-            value={'14'}
-            titleColor='primary'
-          />
-          <StatsField
-            title={'Following'}
-            value={'4'}
-            titleColor='primary'
-          />
+          <StatsField title={'Followers'} value={'14'} titleColor='primary' />
+          <StatsField title={'Following'} value={'4'} titleColor='primary' />
         </Box>
         <Box display={'flex'}>
           <Button text={'Edit'} onClick={toggleItem} />

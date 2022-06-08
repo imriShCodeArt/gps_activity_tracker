@@ -1,9 +1,9 @@
 import { Divider, Grid } from '@mui/material'
 import React from 'react'
-import Heading6 from '../../../../../components/base/Typography/Heading6'
-import StatsHeading from '../../../../../components/base/Typography/StatsHeading'
-import StatsValue from '../../../../../components/base/Typography/StatsValue'
-import SubHeader2 from '../../../../../components/base/Typography/SubHeader2'
+import Heading6 from 'base/Typography/Heading6'
+import StatsHeading from 'base/Typography/StatsHeading'
+import StatsValue from 'base/Typography/StatsValue'
+import SubHeader2 from 'base/Typography/SubHeader2'
 
 function Splits({ splitsArr }) {
   const Lines = splitsArr.map(({ pace, paceUnit, elevation }, index) => {

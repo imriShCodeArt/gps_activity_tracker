@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import StatsHeading from '../../../../../components/base/Typography/StatsHeading'
-import StatsValue from '../../../../../components/base/Typography/StatsValue'
+import StatsHeading from 'base/Typography/StatsHeading'
+import StatsValue from 'base/Typography/StatsValue'
 
 function SessionStats({ stats }) {
   const Item = ({ title, value }) => {

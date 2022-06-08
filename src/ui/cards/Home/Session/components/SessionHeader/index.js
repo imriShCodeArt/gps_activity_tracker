@@ -2,7 +2,7 @@ import { RunCircleOutlined } from '@mui/icons-material'
 import { CardHeader } from '@mui/material'
 import React from 'react'
 
-import Avatar from '../../../../../components/base/Avatar'
+import Avatar from 'base/Avatar'
 
 function SessionHeader({ name, date }) {
   const tmpDate = new Date(),

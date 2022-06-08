@@ -1,8 +1,8 @@
 import { RunCircleOutlined } from '@mui/icons-material'
 import { Card, CardContent, CardHeader, Stack } from '@mui/material'
 import React from 'react'
-import SubHeader1 from '../../../components/base/Typography/SubHeader1'
-import StatsField from '../../../components/x/Map/StatsField'
+import SubHeader1 from 'base/Typography/SubHeader1'
+import StatsField from 'x/StatsField'
 import TrendTable from './components/TrendTable'
 
 function WeeklySummary() {
