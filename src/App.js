@@ -6,10 +6,12 @@ import Record from './ui/pages/Record'
 import Profile from './ui/pages/Profile'
 import { Provider as ReduxProvider } from 'react-redux'
 import { store } from './redux/store'
+import { Counter } from './redux/slices/example/Counter'
 
 function App() {
   return (
     <ReduxProvider store={store}>
+      <Counter />
       <Router
         routes={[
           {
