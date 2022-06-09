@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import {
@@ -12,6 +12,12 @@ import {
 } from '@mui/material'
 
 function NavBar({ links }) {
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight)
+
+  window.addEventListener('resize', () => {
+    setScreenHeight(window.innerHeight)
+  })
+
   const NavBtn = ({ icon, text, href }) => {
     return (
       <Card sx={{ flexGrow: 2 }} elevation={0}>
@@ -22,7 +28,8 @@ function NavBar({ links }) {
           <Box
             sx={{
               display: { xs: 'block', md: 'flex' },
-              padding:{ xs: 'auto', md:'0em .55em'}
+              padding: { xs: 'auto', md: '0em .55em' },
+              paddingBottom: { xs: '.5em', md:'auto'},
             }}
             textAlign={'center'}
             color={useTheme().palette.primary.main}
@@ -40,10 +47,10 @@ function NavBar({ links }) {
   }
   return (
     <Root
-      color='secondary'      
+      color='secondary'
       position='fixed'
       sx={{
-        top: { xs: `${window.innerHeight - 62}px`, md: '3.5em' },
+        top: { xs: `${screenHeight - 62}px`, md: '3.5em' },
         height: '2em',
       }}
     >
